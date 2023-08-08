@@ -1,7 +1,9 @@
 <?php
+    namespace BiometricsData;
     require 'company-info.php';
+
 if(isset($_POST['old-password']) && $_POST['new-password']){
-    $url = '192.168.0.115:8090';
+    $url = '192.168.0.143:8090';
     $pass = $_POST['old-password'];
     $device = new CompanyInfo($url, $pass);
 

@@ -31,20 +31,9 @@ class Records{
      */
     public function __construct($pass, $id, $startTime = null, $endTime = null, $endpoint = null)
     {
-        if($startTime == null){
-            $startTime = '0';
-        }
-        if($endTime == null){
-            $endTime = '0';
-        }
-        if($endpoint == null){
-            //Default endpoint:
-            $endpoint = 'http://192.168.0.115:8090/newFindRecords';
-        }
-        else{
-            //Custom endpoint:
-            $endpoint = $endpoint.'/newFindRecords';
-        }
+        $startTime = $startTime == null ? '0' : $startTime;
+        $endTime = $endTime == null ? '0' : $endTime;
+        $endpoint = $endpoint == null ? 'http://192.168.0.143:8090/newFindRecords' : $endpoint.'/newFindRecords';
 
         // echo $endpoint;
         //endpoint may be changed based on device ip and port:

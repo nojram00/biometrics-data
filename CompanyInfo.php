@@ -1,4 +1,5 @@
 <?php
+namespace BiometricsData;
 class CompanyInfo{
 
     private $password;
@@ -42,7 +43,7 @@ class CompanyInfo{
 
         // var_dump($res['msg']);
         // echo $res['msg'];
-        return $res['msg'];
+        return $res['msg'] ? $res['msg'] : '';
     }
 }
 
